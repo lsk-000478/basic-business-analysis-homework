@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="基础商业分析 Codex Skill 作业。分析经营数据、产品、营销和人群，附奶茶店示例与 Skill 文件。">
+  <title>基础商业分析 Skill</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f7f4ed;
+      --ink: #182929;
+      --muted: #475b56;
+      --rule: #d6dcd3;
+      --accent: #214f40;
+      --surface: #fffcf7;
+      font-family: system-ui, "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.65;
+    }
+
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); }
+    header { border-top: 6px solid var(--accent); border-bottom: 1px solid var(--rule); }
+    .wrap { width: min(100% - 2.5rem, 60rem); margin-inline: auto; }
+    .hero { padding-block: clamp(2.5rem, 7vw, 5rem) clamp(2rem, 5vw, 3.5rem); }
+    h1, h2, h3, p { margin: 0; }
+    h1 { font-size: clamp(2rem, 7vw, 4rem); line-height: 1.14; letter-spacing: -.035em; }
+    h2 { font-size: clamp(1.3rem, 3vw, 1.7rem); line-height: 1.35; }
+    h3 { font-size: 1.1rem; }
+    p { color: var(--muted); }
+    .lead { margin-top: 1rem; max-width: 40rem; font-size: clamp(1rem, 2vw, 1.16rem); }
+    .actions { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.8rem;
+      border: 1px solid var(--accent);
+      border-radius: .45rem;
+      padding: .5rem .95rem;
+      color: var(--accent);
+      font-weight: 650;
+      text-decoration: none;
+    }
+    .primary { color: #fff; background: var(--accent); }
+    .button:hover { box-shadow: 0 0 0 2px #214f4033; }
+    a:focus-visible { outline: 3px solid #97652e; outline-offset: 3px; }
+    main { padding-block: 2.25rem 3rem; }
+    section + section { margin-top: 2.3rem; }
+    .topics, .metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; }
+    .topics { margin-top: .9rem; }
+    .topics article { padding: 1rem; border: 1px solid var(--rule); border-radius: .55rem; background: var(--surface); }
+    .topics p { margin-top: .4rem; }
+    .case { padding: clamp(1rem, 3.5vw, 1.75rem); border: 1px solid var(--rule); border-radius: .75rem; background: #edf2e9; }
+    .case p, .usage p { margin-top: .65rem; }
+    .metrics { margin: 1rem 0 .7rem; }
+    .metrics div { border-top: 1px solid #a4b6a6; padding-top: .6rem; }
+    .metrics dt { color: var(--muted); font-size: .9rem; }
+    .metrics dd { margin: 0; color: var(--accent); font-size: clamp(.98rem, 3vw, 1.55rem); font-weight: 700; }
+    strong { color: var(--ink); }
+    code { font-size: .9em; overflow-wrap: anywhere; }
+
+    @media (max-width: 40rem) {
+      .topics { grid-template-columns: 1fr; }
+      .wrap { width: calc(100% - 2rem); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap hero">
+      <h1>基础商业分析 Skill</h1>
+      <p class="lead">用经营数据算营收、利润和保本销量，从产品、营销和人群三个方面判断一门生意。</p>
+      <nav class="actions" aria-label="Skill 文件">
+        <a class="button primary" href="./basic-business-analysis/SKILL.md" download="SKILL.md">下载 SKILL.md</a>
+        <a class="button" href="https://github.com/lsk-000478/basic-business-analysis-homework/blob/main/basic-business-analysis/SKILL.md">查看完整 Skill</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section aria-labelledby="framework">
+      <h2 id="framework">分析框架</h2>
+      <div class="topics">
+        <article>
+          <h3>产品</h3>
+          <p>找出主要利润来源，说明主产品解决什么需求，以及顾客为什么选它。</p>
+        </article>
+        <article>
+          <h3>营销</h3>
+          <p>看业务靠商单、线上成交还是线索获客，梳理从公域触达到成交和复购的过程。</p>
+        </article>
+        <article>
+          <h3>人群</h3>
+          <p>明确顾客的需求场景、消费预算，以及从了解产品到下单有哪些顾虑。</p>
+        </article>
+      </div>
+    </section>
+    <section class="case" aria-labelledby="example">
+      <h2 id="example">奶茶店为什么多卖了却少赚了？</h2>
+      <p>上月卖 1,000 杯，均价 20 元，固定成本 8,000 元。本月卖 1,200 杯，均价 18 元，固定成本 9,000 元。两个月每杯变动成本均为 8 元。</p>
+      <dl class="metrics">
+        <div><dt>本月营收</dt><dd>21,600 元</dd></div>
+        <div><dt>本月经营利润</dt><dd>3,000 元</dd></div>
+        <div><dt>本月保本销量</dt><dd>900 杯</dd></div>
+      </dl>
+      <p><strong>利润比上月少了 1,000 元。</strong> 多卖 200 杯增加的 2,400 元刚好被均价下降抵消，固定成本又增加了 1,000 元。按本月每杯贡献 10 元计算，卖到 900 杯即可覆盖固定成本。</p>
+    </section>
+    <section class="usage" aria-labelledby="usage">
+      <h2 id="usage">在 Codex 中使用</h2>
+      <p>把下载的文件放进项目的 <code>.agents/skills/basic-business-analysis/</code> 目录。打开项目后，直接输入经营数据或中文问题，例如「我的店销量涨了，为什么利润反而降了？」</p>
+    </section>
+  </main>
+</body>
+</html>
